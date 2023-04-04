@@ -1,0 +1,69 @@
+﻿@model IEnumerable<ProjetoAspNetMvc.ViewModels.Frete>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.CodigoFrete)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Ativo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PermiteValor)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NecessitaTranportadora)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DescricaoPortugues)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DescricaoIngles)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DescricaoEspanhol)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.CodigoFrete)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Ativo)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PermiteValor)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NecessitaTranportadora)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DescricaoPortugues)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DescricaoIngles)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DescricaoEspanhol)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+            @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+            @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+        </td>
+    </tr>
+}
+
+</table>
